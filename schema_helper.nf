@@ -3,7 +3,7 @@
 import groovy.json.JsonSlurper
 
 def showSchemaHelp(String schemaPath) {
-    def schemaFile = new File(schemaPath)
+    def schemaFile = new File("$projectDir/$schemaPath")
     def jsonSlurper = new JsonSlurper()
     def schema = jsonSlurper.parse(schemaFile)
 
